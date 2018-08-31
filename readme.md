@@ -14,7 +14,7 @@ Build and Deploy the project. A container should start in the Process Server fro
 
 ## Using the rules
 
-Use the BRMS REST API to access the rules. Below is the appropriate command to for this particular application. This call will insert a fact from the input file and fire all rules within the container.
+Use the BRMS REST API to access the rules. The command below will insert a fact from the input file and fire all rules within the container.
 
 You should expect a JSON response containing the modified fact. The input file is required and all fields should be initialized. The rules will only fire for Fleet Ids that are contained within the rules.
 
