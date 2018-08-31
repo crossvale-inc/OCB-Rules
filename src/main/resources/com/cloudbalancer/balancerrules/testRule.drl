@@ -3,7 +3,6 @@ package com.cloudbalancer.balancerrules;
 import com.cloudbalancer.balancerrules.Fleet;
 // rule values at A10, header at A5
 rule "test rule firing number 2"
-	agenda-group "override"
 	when
 		fleetObject: Fleet(name == "fleetD")
 	then
