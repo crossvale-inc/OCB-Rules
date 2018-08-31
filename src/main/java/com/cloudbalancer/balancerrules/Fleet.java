@@ -6,12 +6,117 @@ package com.cloudbalancer.balancerrules;
 
 public class Fleet implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Fleet() {
-    }
+	@org.kie.api.definition.type.Label(value = "id")
+	private java.lang.String id;
+	@org.kie.api.definition.type.Label(value = "name")
+	private java.lang.String name;
+	@org.kie.api.definition.type.Label(value = "currentCapacity")
+	private java.lang.Integer currenctCapacity;
+	@org.kie.api.definition.type.Label(value = "targetCapacity")
+	private java.lang.Integer targetCapacity;
+	@org.kie.api.definition.type.Label(value = "availabilityZone")
+	private java.lang.String availabilityZone;
+	@org.kie.api.definition.type.Label(value = "instanceType")
+	private java.lang.String instanceType;
+	@org.kie.api.definition.type.Label(value = "cpuLoad")
+	private java.lang.Integer cpuLoad;
+	@org.kie.api.definition.type.Label(value = "memoryLoad")
+	private java.lang.Integer memoryLoad;
+	@org.kie.api.definition.type.Label(value = "networkLoad")
+	private java.lang.Integer networkLoad;
 
+	public Fleet() {
+	}
 
+	public java.lang.String getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
+	public java.lang.String getName() {
+		return this.name;
+	}
+
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.Integer getCurrenctCapacity() {
+		return this.currenctCapacity;
+	}
+
+	public void setCurrenctCapacity(java.lang.Integer currenctCapacity) {
+		this.currenctCapacity = currenctCapacity;
+	}
+
+	public java.lang.Integer getTargetCapacity() {
+		return this.targetCapacity;
+	}
+
+	public void setTargetCapacity(java.lang.Integer targetCapacity) {
+		this.targetCapacity = targetCapacity;
+	}
+
+	public java.lang.String getAvailabilityZone() {
+		return this.availabilityZone;
+	}
+
+	public void setAvailabilityZone(java.lang.String availabilityZone) {
+		this.availabilityZone = availabilityZone;
+	}
+
+	public java.lang.String getInstanceType() {
+		return this.instanceType;
+	}
+
+	public void setInstanceType(java.lang.String instanceType) {
+		this.instanceType = instanceType;
+	}
+
+	public java.lang.Integer getCpuLoad() {
+		return this.cpuLoad;
+	}
+
+	public void setCpuLoad(java.lang.Integer cpuLoad) {
+		this.cpuLoad = cpuLoad;
+	}
+
+	public java.lang.Integer getMemoryLoad() {
+		return this.memoryLoad;
+	}
+
+	public void setMemoryLoad(java.lang.Integer memoryLoad) {
+		this.memoryLoad = memoryLoad;
+	}
+
+	public java.lang.Integer getNetworkLoad() {
+		return this.networkLoad;
+	}
+
+	public void setNetworkLoad(java.lang.Integer networkLoad) {
+		this.networkLoad = networkLoad;
+	}
+
+	public Fleet(java.lang.String id, java.lang.String name,
+			java.lang.Integer currenctCapacity,
+			java.lang.Integer targetCapacity,
+			java.lang.String availabilityZone, java.lang.String instanceType,
+			java.lang.Integer cpuLoad, java.lang.Integer memoryLoad,
+			java.lang.Integer networkLoad) {
+		this.id = id;
+		this.name = name;
+		this.currenctCapacity = currenctCapacity;
+		this.targetCapacity = targetCapacity;
+		this.availabilityZone = availabilityZone;
+		this.instanceType = instanceType;
+		this.cpuLoad = cpuLoad;
+		this.memoryLoad = memoryLoad;
+		this.networkLoad = networkLoad;
+	}
 
 }
