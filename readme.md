@@ -1,6 +1,6 @@
 ## Overview
 
-This repository contains rules to be used by the 'Cloud Balancer' application from within a Process Automation Manager project. The rules update the Target Capacity for the respective fleet input.
+This repository contains rules to be used from within a Process Automation Manager project. The rules update the Target Capacity for the respective fleet input.
 
 ## Prerequisites
 
