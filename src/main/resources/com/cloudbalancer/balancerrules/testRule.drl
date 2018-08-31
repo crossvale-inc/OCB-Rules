@@ -5,7 +5,7 @@ import com.cloudbalancer.balancerrules.Fleet;
 rule "test rule firing number 2"
 	agenda-group "override"
 	when
-		fleetObject: Fleet(id != "")
+		fleetObject: Fleet(name == "fleetD")
 	then
 		System.out.println("Fired Test Fleet Present");
 end
