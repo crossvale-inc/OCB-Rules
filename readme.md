@@ -1,10 +1,10 @@
 ## Overview
 
-This repository contains rules to be used from within a Process Automation Manager project. The rules update the Target Capacity field for the respective Fleet object input.
+This repository contains rules to be used from within a Red Hat Process Automation Manager project. The rules update the Target Capacity field for the respective Fleet object input.
 
 ## Prerequisites
 
-An instance of [Process Automation Manager 7.0](https://access.redhat.com/documentation/en-us/red_hat_process_automation_manager/7.0/) with both Business Central and Process Server deployed.
+An instance of [Red Hat Process Automation Manager 7.0](https://access.redhat.com/documentation/en-us/red_hat_process_automation_manager/7.0/) with both Business Central and Process Server deployed.
 
 ## Deploying
 
