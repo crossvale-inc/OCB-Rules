@@ -1,6 +1,6 @@
 ## Overview
 
-This repository contains rules to be used from within a Process Automation Manager project. The rules update the Target Capacity for the respective fleet input.
+This repository contains rules to be used from within a Process Automation Manager project. The rules update the Target Capacity field for the respective Fleet object input.
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ Build and Deploy the project. A container should start in the Process Server fro
 
 Use the BRMS REST API to access the rules. Below is the appropriate command to for this particular application. This call will insert a fact from the input file and fire all rules within the container.
 
-You should expect a JSON response containing the modified fact. The input file is required. The rules will only fire for Fleet Ids that are contained within the rules.
+You should expect a JSON response containing the modified fact. The input file is required and all fields should be initialized. The rules will only fire for Fleet Ids that are contained within the rules.
 
 [More information on the BRMS REST API](https://access.redhat.com/documentation/en-us/red_hat_decision_manager/7.0/html/installing_and_configuring_red_hat_business_optimizer/optimizer-rest-api-for-execution-server-con)
 ```
