@@ -27,11 +27,14 @@ public class Fleet implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("networkLoad")
 	private java.lang.Integer networkLoad;
 
-	@org.kie.api.definition.type.Label(value = "price")
+	@org.kie.api.definition.type.Label("price")
 	private java.util.List<com.cloudbalancer.balancerrules.Price> price;
 
-	@org.kie.api.definition.type.Label(value = "filter")
+	@org.kie.api.definition.type.Label("filter")
 	private java.lang.Boolean filter;
+
+	@org.kie.api.definition.type.Label(value = "currentTime")
+	private java.lang.Integer currentTime;
 
 	public Fleet() {
 	}
@@ -125,6 +128,14 @@ public class Fleet implements java.io.Serializable {
 		this.filter = filter;
 	}
 
+	public java.lang.Integer getCurrentTime() {
+		return this.currentTime;
+	}
+
+	public void setCurrentTime(java.lang.Integer currentTime) {
+		this.currentTime = currentTime;
+	}
+
 	public Fleet(java.lang.String id, java.lang.String name,
 			java.lang.Integer currenctCapacity,
 			java.lang.Integer targetCapacity,
@@ -132,7 +143,7 @@ public class Fleet implements java.io.Serializable {
 			java.lang.Integer cpuLoad, java.lang.Integer memoryLoad,
 			java.lang.Integer networkLoad,
 			java.util.List<com.cloudbalancer.balancerrules.Price> price,
-			java.lang.Boolean filter) {
+			java.lang.Boolean filter, java.lang.Integer currentTime) {
 		this.id = id;
 		this.name = name;
 		this.currenctCapacity = currenctCapacity;
@@ -144,6 +155,7 @@ public class Fleet implements java.io.Serializable {
 		this.networkLoad = networkLoad;
 		this.price = price;
 		this.filter = filter;
+		this.currentTime = currentTime;
 	}
 
 }
