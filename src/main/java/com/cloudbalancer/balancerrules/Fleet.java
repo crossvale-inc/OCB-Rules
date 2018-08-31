@@ -8,24 +8,30 @@ public class Fleet implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "id")
+	@org.kie.api.definition.type.Label("id")
 	private java.lang.String id;
-	@org.kie.api.definition.type.Label(value = "name")
+	@org.kie.api.definition.type.Label("name")
 	private java.lang.String name;
-	@org.kie.api.definition.type.Label(value = "currentCapacity")
+	@org.kie.api.definition.type.Label("currentCapacity")
 	private java.lang.Integer currenctCapacity;
-	@org.kie.api.definition.type.Label(value = "targetCapacity")
+	@org.kie.api.definition.type.Label("targetCapacity")
 	private java.lang.Integer targetCapacity;
-	@org.kie.api.definition.type.Label(value = "availabilityZone")
+	@org.kie.api.definition.type.Label("availabilityZone")
 	private java.lang.String availabilityZone;
-	@org.kie.api.definition.type.Label(value = "instanceType")
+	@org.kie.api.definition.type.Label("instanceType")
 	private java.lang.String instanceType;
-	@org.kie.api.definition.type.Label(value = "cpuLoad")
+	@org.kie.api.definition.type.Label("cpuLoad")
 	private java.lang.Integer cpuLoad;
-	@org.kie.api.definition.type.Label(value = "memoryLoad")
+	@org.kie.api.definition.type.Label("memoryLoad")
 	private java.lang.Integer memoryLoad;
-	@org.kie.api.definition.type.Label(value = "networkLoad")
+	@org.kie.api.definition.type.Label("networkLoad")
 	private java.lang.Integer networkLoad;
+
+	@org.kie.api.definition.type.Label(value = "price")
+	private java.util.List<com.cloudbalancer.balancerrules.Price> price;
+
+	@org.kie.api.definition.type.Label(value = "filter")
+	private java.lang.Boolean filter;
 
 	public Fleet() {
 	}
@@ -102,12 +108,31 @@ public class Fleet implements java.io.Serializable {
 		this.networkLoad = networkLoad;
 	}
 
+	public java.util.List<com.cloudbalancer.balancerrules.Price> getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(
+			java.util.List<com.cloudbalancer.balancerrules.Price> price) {
+		this.price = price;
+	}
+
+	public java.lang.Boolean getFilter() {
+		return this.filter;
+	}
+
+	public void setFilter(java.lang.Boolean filter) {
+		this.filter = filter;
+	}
+
 	public Fleet(java.lang.String id, java.lang.String name,
 			java.lang.Integer currenctCapacity,
 			java.lang.Integer targetCapacity,
 			java.lang.String availabilityZone, java.lang.String instanceType,
 			java.lang.Integer cpuLoad, java.lang.Integer memoryLoad,
-			java.lang.Integer networkLoad) {
+			java.lang.Integer networkLoad,
+			java.util.List<com.cloudbalancer.balancerrules.Price> price,
+			java.lang.Boolean filter) {
 		this.id = id;
 		this.name = name;
 		this.currenctCapacity = currenctCapacity;
@@ -117,6 +142,8 @@ public class Fleet implements java.io.Serializable {
 		this.cpuLoad = cpuLoad;
 		this.memoryLoad = memoryLoad;
 		this.networkLoad = networkLoad;
+		this.price = price;
+		this.filter = filter;
 	}
 
 }
