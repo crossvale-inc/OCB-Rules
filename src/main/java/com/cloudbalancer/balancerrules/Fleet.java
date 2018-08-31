@@ -12,8 +12,6 @@ public class Fleet implements java.io.Serializable {
 	private java.lang.String id;
 	@org.kie.api.definition.type.Label("name")
 	private java.lang.String name;
-	@org.kie.api.definition.type.Label("currentCapacity")
-	private java.lang.Integer currenctCapacity;
 	@org.kie.api.definition.type.Label("targetCapacity")
 	private java.lang.Integer targetCapacity;
 	@org.kie.api.definition.type.Label("availabilityZone")
@@ -33,8 +31,11 @@ public class Fleet implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("filter")
 	private java.lang.Boolean filter;
 
-	@org.kie.api.definition.type.Label(value = "currentTime")
+	@org.kie.api.definition.type.Label("currentTime")
 	private java.lang.Integer currentTime;
+
+	@org.kie.api.definition.type.Label(value = "currentCapacity")
+	private java.lang.Integer currentCapacity;
 
 	public Fleet() {
 	}
@@ -53,14 +54,6 @@ public class Fleet implements java.io.Serializable {
 
 	public void setName(java.lang.String name) {
 		this.name = name;
-	}
-
-	public java.lang.Integer getCurrenctCapacity() {
-		return this.currenctCapacity;
-	}
-
-	public void setCurrenctCapacity(java.lang.Integer currenctCapacity) {
-		this.currenctCapacity = currenctCapacity;
 	}
 
 	public java.lang.Integer getTargetCapacity() {
@@ -136,17 +129,24 @@ public class Fleet implements java.io.Serializable {
 		this.currentTime = currentTime;
 	}
 
+	public java.lang.Integer getCurrentCapacity() {
+		return this.currentCapacity;
+	}
+
+	public void setCurrentCapacity(java.lang.Integer currentCapacity) {
+		this.currentCapacity = currentCapacity;
+	}
+
 	public Fleet(java.lang.String id, java.lang.String name,
-			java.lang.Integer currenctCapacity,
 			java.lang.Integer targetCapacity,
 			java.lang.String availabilityZone, java.lang.String instanceType,
 			java.lang.Integer cpuLoad, java.lang.Integer memoryLoad,
 			java.lang.Integer networkLoad,
 			java.util.List<com.cloudbalancer.balancerrules.Price> price,
-			java.lang.Boolean filter, java.lang.Integer currentTime) {
+			java.lang.Boolean filter, java.lang.Integer currentTime,
+			java.lang.Integer currentCapacity) {
 		this.id = id;
 		this.name = name;
-		this.currenctCapacity = currenctCapacity;
 		this.targetCapacity = targetCapacity;
 		this.availabilityZone = availabilityZone;
 		this.instanceType = instanceType;
@@ -156,6 +156,7 @@ public class Fleet implements java.io.Serializable {
 		this.price = price;
 		this.filter = filter;
 		this.currentTime = currentTime;
+		this.currentCapacity = currentCapacity;
 	}
 
 }
