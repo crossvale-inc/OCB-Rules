@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "2a7bc015-23e6-4e6d-9602-36d8ecd4985f",
+		"name": "OCB-rules",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RulesRequest",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "kieserver",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password@1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "--data",
+						"value": "@/home/jstoeckel/Temp/NewRuleset/fleetInput.json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "http://js-pam-kieserver-js-brms.apps.crossvale-ocp.com:80/services/rest/server/containers/instances/BalancerRules_1.0.2?",
+					"protocol": "http",
+					"host": [
+						"js-pam-kieserver-js-brms",
+						"apps",
+						"crossvale-ocp",
+						"com"
+					],
+					"port": "80",
+					"path": [
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"instances",
+						"BalancerRules_1.0.2"
+					],
+					"query": [
+						{
+							"key": "--data",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
